@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Actors</title>
+    <link th:href="@{/css/style.css}" rel="stylesheet"/>
 </head>
 <body>
+    <img th:src="@{/images/buds.jpg}" alt="budSpencer"/>
     <div th:each="actor:${actors}">
         <a th:href="@{/actors/{id}(id = ${actor.id})}">
             <span th:text="${actor.name}"></span>
