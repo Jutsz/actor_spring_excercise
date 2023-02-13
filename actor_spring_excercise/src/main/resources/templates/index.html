@@ -6,7 +6,9 @@
 </head>
 <body>
     <div th:each="actor:${actors}">
-        <span th:text="${actor.getName()}"></span>
+        <a th:href="@{/actors/{id}(id = ${actor.id})}">
+            <span th:text="${actor.name}"></span>
+        </a>
     </div>
     <form action="/actors" method="post">
         <p>Name: <input type="text" name="name" /></p>
